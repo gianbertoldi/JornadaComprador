@@ -1,0 +1,31 @@
+package task;
+
+import static org.junit.Assert.assertEquals;
+
+import org.openqa.selenium.WebDriver;
+
+import page.DadosVendaPage;
+import utils.ExecutorBrowser;
+import utils.SeleniumActions;
+import validations.DadosVendaValidations;
+
+public class ValidarDadosDoCompradorTask extends SeleniumActions {
+
+	WebDriver driver;
+	ExecutorBrowser executor;
+	DadosVendaPage dadoVendaPage;
+	DadosVendaValidations dadosVendaValidacao;
+	
+	public ValidarDadosDoCompradorTask(WebDriver driver) {
+		super(driver);
+		executor = new ExecutorBrowser();
+		dadoVendaPage = new DadosVendaPage(driver, dadoVendaPage);
+		dadosVendaValidacao = new DadosVendaValidations(driver);
+	}
+	
+	public void validaDadoVenda() {
+		executor.setup();	
+		assertEquals("TESTE", dadoVendaPage.txtNomeVendedor(), "Nome esta diferente");
+		//dadosVendaValidacao.validaDadosVendaParcelada();
+	}
+}

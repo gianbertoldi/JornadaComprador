@@ -1,0 +1,4 @@
+1697468524881	Rename type 'Executor'
+1697472714226	Rename type 'TelaDadosVenda'
+1697557171012	Rename field 'dadoVenda'
+1697567141962	Rename method 'validaDadosVendaParcelada'

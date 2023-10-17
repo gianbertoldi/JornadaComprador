@@ -1,0 +1,18 @@
+package task;
+
+import java.util.concurrent.Executor;
+
+import org.openqa.selenium.WebDriver;
+
+import utils.SeleniumActions;
+
+public class ValidarDadosDoCompradorTask extends SeleniumActions {
+
+	WebDriver driver;
+	Executor execute;
+	
+	public ValidarDadosDoCompradorTask(WebDriver driver) {
+		super(driver);
+		execute = new Executor();
+	}
+}

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<qualifiedTypeNameHistroy>
+    <fullyQualifiedTypeName name="java.util.concurrent.Executor"/>
+    <fullyQualifiedTypeName name="org.asynchttpclient.util.Assertions"/>
+    <fullyQualifiedTypeName name="org.junit.Test"/>
+    <fullyQualifiedTypeName name="task.ValidarDadosDoCompradorTask"/>
+    <fullyQualifiedTypeName name="org.junit.Before"/>
+    <fullyQualifiedTypeName name="utils.ExecutorBrowser"/>
+    <fullyQualifiedTypeName name="utils.BrowserDriverMananger"/>
+    <fullyQualifiedTypeName name="validations.DadosVendaValidations"/>
+    <fullyQualifiedTypeName name="org.openqa.selenium.WebDriver"/>
+    <fullyQualifiedTypeName name="page.DadosVendaPage"/>
+    <fullyQualifiedTypeName name="org.junit.After"/>
+    <fullyQualifiedTypeName name="org.openqa.selenium.edge.EdgeDriver"/>
+    <fullyQualifiedTypeName name="java.time.Duration"/>
+    <fullyQualifiedTypeName name="org.openqa.selenium.WebElement"/>
+    <fullyQualifiedTypeName name="org.openqa.selenium.By"/>
+    <fullyQualifiedTypeName name="utils.SeleniumActions"/>
+    <fullyQualifiedTypeName name="page.DadosCompradorPage"/>
+    <fullyQualifiedTypeName name="validations.GenericValidations"/>
+</qualifiedTypeNameHistroy>

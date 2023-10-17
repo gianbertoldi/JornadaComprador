@@ -1,0 +1,26 @@
+package validations;
+
+import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertTrue;
+
+import org.openqa.selenium.WebDriver;
+
+import page.DadosVendaPage;
+
+public class DadosVendaValidations {
+
+	WebDriver driver;
+	DadosVendaPage vendaPage;
+	
+	public DadosVendaValidations(WebDriver driver) {
+		this.driver = driver;
+	}
+
+	public void validaDadosVendaParcelada() {
+		assertEquals("TESTE", vendaPage.txtNomeVendedor(), "Nome esta diferente");
+		assertEquals(vendaPage.txtCpfVendedor(), "000.000.001-91", "CPF esta diferente");
+		assertEquals("Link válido até", vendaPage.txtValidade(), "Textos estão diferentes");
+		assertTrue(vendaPage.txtValor().contains("200"));
+		assertTrue(vendaPage.txtMaximoParcela().contains("Em até 10x"));
+	}
+}

@@ -1,0 +1,27 @@
+package test;
+
+import org.junit.Before;
+import org.junit.Test;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+
+import task.ValidarDadosDoCompradorTask;
+
+public class TelaDadosVendaTest {
+
+	private WebDriver driver;
+	ValidarDadosDoCompradorTask dadosCompradorTask;
+	
+	@Before
+	public void setUp() {
+	    // Inicialize o WebDriver aqui, por exemplo, usando o Selenium WebDriver
+	    driver = new ChromeDriver();
+	    // Outras configurações, como URL base, podem ser definidas aqui
+	}
+	
+	@Test
+	public void telaDadoVendaParcelada() {
+		dadosCompradorTask = new ValidarDadosDoCompradorTask(driver);
+		dadosCompradorTask.validaDadoVenda();
+	}
+}

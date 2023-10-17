@@ -1,0 +1,18 @@
+package test;
+
+import org.junit.Test;
+import org.openqa.selenium.WebDriver;
+
+import task.ValidarDadosDoCompradorTask;
+
+public class TelaDadosVenda {
+
+	private WebDriver driver;
+	ValidarDadosDoCompradorTask dadosCompradorTask;
+	
+	@Test
+	public void telaDadoVendaParcelada() {
+		dadosCompradorTask = new ValidarDadosDoCompradorTask(driver);
+		dadosCompradorTask.validaDadoVenda();
+	}
+}

@@ -1,0 +1,52 @@
+package task;
+
+import org.openqa.selenium.WebDriver;
+
+import page.DadosCompradorPage;
+import page.DadosVendaPage;
+import utils.ExecutorBrowser;
+import utils.SeleniumActions;
+import validations.DadosVendaValidations;
+import validations.GenericValidations;
+
+public class ValidarDadosDoCompradorTask extends SeleniumActions {
+
+	WebDriver driver;
+	ExecutorBrowser executor;
+	DadosVendaPage dadoVendaPage;
+	DadosCompradorPage compradorPage;
+	DadosVendaValidations dadosVendaValidacao;
+	GenericValidations genericValidations;
+	
+	public ValidarDadosDoCompradorTask(WebDriver driver) {
+		super(driver);
+		this.driver = driver;
+		genericValidations = new GenericValidations(driver);
+		executor = new ExecutorBrowser();
+		dadoVendaPage = new DadosVendaPage(driver, dadoVendaPage);
+		compradorPage = new DadosCompradorPage(driver);
+		dadosVendaValidacao = new DadosVendaValidations(driver);
+	}
+	
+	public void validaDadoVenda() {
+		dadosVendaValidacao.validaDadosVendaParcelada();
+		dadoVendaPage.btnContinuar();
+	}
+
+	public void validaDadosComprador(String nome, String cpf, String celular, String email) {
+		dadoVendaPage.btnContinuar();
+		compradorPage.inputNomeComprador(nome);
+		compradorPage.inputCpfComprador(cpf);
+		compradorPage.inputCelularComprador(celular);
+		compradorPage.inputEmailComprador(email);
+	}
+	
+	public void validaMensagemErroCampoNomeVazio(String nome) {
+		dadoVendaPage.btnContinuar();
+		compradorPage.inputNomeComprador(nome);
+		tirarFocoDoElementoAtual();
+		genericValidations.validaTextoEsperadoAtual(compradorPage.txtErroNome(), "Insira o nome");
+		genericValidations.estaDesabilitado(compradorPage.btnContinuar());
+	}
+	
+}

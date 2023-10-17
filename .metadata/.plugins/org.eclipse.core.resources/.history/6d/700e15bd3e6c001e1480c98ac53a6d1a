@@ -1,0 +1,19 @@
+package utils;
+
+import org.openqa.selenium.WebDriver;
+
+public class ExecutorBrowser {
+
+	private WebDriver driver;
+	BrowserDriverMananger browserMananger;
+	
+	public void setup() {	
+		browserMananger = new BrowserDriverMananger();
+		driver = BrowserDriverMananger.browser("edge");
+		driver.get("www.youtube.com");
+	}
+	
+	public void exit() {
+		driver.quit();
+	}
+}

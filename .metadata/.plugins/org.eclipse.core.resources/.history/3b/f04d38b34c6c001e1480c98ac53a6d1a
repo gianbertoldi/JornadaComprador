@@ -1,0 +1,20 @@
+package validations;
+
+import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertTrue;
+
+import page.DadosVendaPage;
+
+public class DadosVendaValidations {
+
+	DadosVendaPage vendaPage;
+
+	public void validaDadosVendaParcelada() {
+		vendaPage = new DadosVendaPage(null, vendaPage);
+		assertEquals("TESTE", vendaPage.txtNomeVendedor(), "Nome esta diferente");
+		assertEquals(vendaPage.txtCpfVendedor(), "000.000.001-91", "CPF esta diferente");
+		assertEquals("Link válido até", vendaPage.txtValidade(), "Textos estão diferentes");
+		assertTrue(vendaPage.txtValor().contains("200"));
+		assertTrue(vendaPage.txtMaximoParcela().contains("Em até 10x"));
+	}
+}

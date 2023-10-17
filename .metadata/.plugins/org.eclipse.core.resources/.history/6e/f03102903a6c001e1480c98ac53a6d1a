@@ -1,0 +1,29 @@
+package test;
+
+import org.junit.Before;
+import org.junit.Test;
+import org.openqa.selenium.WebDriver;
+
+import task.ValidarDadosDoCompradorTask;
+import utils.BrowserDriverMananger;
+
+public class TelaDadosVenda {
+
+	private WebDriver driver;
+	BrowserDriverMananger browserMananger;
+	ValidarDadosDoCompradorTask dadosCompradorTask;
+	
+	@Before
+	public void setup() {
+		browserMananger = new BrowserDriverMananger();
+		driver = BrowserDriverMananger.browser("edge");
+		driver.get("ww4.banrisul.com.br/bvr/linkpagamento/TESTE/Q9_bCHsVaA-q_f3hfNcRpamysbOP9YeVHo9mCoU2WGMNkYZw5A");
+	
+	}
+	
+	@Test
+	public void telaDadoVendaParcelada() {
+		dadosCompradorTask = new ValidarDadosDoCompradorTask(driver);
+		dadosCompradorTask.validaDadoVenda();
+	}
+}

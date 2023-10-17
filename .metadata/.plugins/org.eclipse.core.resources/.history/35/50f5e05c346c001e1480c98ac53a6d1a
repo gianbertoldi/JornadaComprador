@@ -1,0 +1,26 @@
+package page;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+
+import utils.SeleniumActions;
+
+public class DadosCompradorPage extends SeleniumActions {
+
+	SeleniumActions actions;
+	private WebDriver driver;
+	
+	public DadosCompradorPage(WebDriver driver, SeleniumActions actions) {
+		super(driver);
+		this.actions = actions;
+	}
+	
+	public WebElement titulo() {
+		return actions.visibilidadeDoElemento(driver, By.xpath("//div[@class='ds-u-label-big-normal spacer-8']"), 10);
+	}
+	
+	public void inputNomeComprador() {
+		
+	}
+}

@@ -1,0 +1,36 @@
+package task;
+
+import org.junit.After;
+import org.openqa.selenium.WebDriver;
+
+import page.DadosVendaPage;
+import utils.ExecutorBrowser;
+import utils.SeleniumActions;
+import validations.DadosVendaValidations;
+
+public class ValidarDadosDoCompradorTask extends SeleniumActions {
+
+	WebDriver driver;
+	ExecutorBrowser executor;
+	DadosVendaPage dadoVendaPage;
+	DadosVendaValidations dadosVendaValidacao;
+	
+	public ValidarDadosDoCompradorTask(WebDriver driver) {
+		super(driver);
+		this.driver = driver;
+		executor = new ExecutorBrowser();
+		dadoVendaPage = new DadosVendaPage(driver, dadoVendaPage);
+		dadosVendaValidacao = new DadosVendaValidations(driver);
+	}
+	
+	public void validaDadoVenda() {
+		executor.setup();	
+		dadoVendaPage.btnContinuar();
+		//dadosVendaValidacao.validaDadosVendaParcelada();
+	}
+	
+	@After
+	public void fecharTeste() {
+		executor.exit();
+	}
+}

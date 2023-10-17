@@ -1,0 +1,15 @@
+package test;
+
+import org.junit.Test;
+
+import task.ValidarDadosDoCompradorTask;
+
+public class TelaDadosVenda {
+
+	ValidarDadosDoCompradorTask dadosCompradorTask;
+	
+	@Test
+	public void telaDadoVendaParcelada() {
+		dadosCompradorTask.validaDadoVenda();
+	}
+}
