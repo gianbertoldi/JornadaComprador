@@ -18,7 +18,7 @@ public class TelaDadosVendaTest {
 	public void setUp() {
 	    browserMananger = new BrowserDriverMananger();
 		driver = BrowserDriverMananger.browser("edge");
-		driver.get("https://ww4.banrisul.com.br/bvr/linkpagamento/TESTE/eoSjeWDQ3ijoeQ_a6xW6xJHN2bTCy5uidg9lBOq9aKopoHmxxQ");	
+		driver.get("Coloque o Link de pagamento");	
 		dadosCompradorTask = new ValidarDadosDoCompradorTask(driver);
 	}
 	@After

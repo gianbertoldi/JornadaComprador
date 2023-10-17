@@ -1,7 +1,6 @@
 package validations;
 
 import static org.junit.Assert.assertEquals;
-import static org.junit.Assert.assertFalse;
 import static org.junit.Assert.assertTrue;
 
 import org.openqa.selenium.WebDriver;
@@ -26,6 +25,6 @@ public class DadosVendaValidations extends SeleniumActions {
 		assertEquals("Nome esta diferente", vendaPage.txtNomeVendedor(), "TESTE");
 		assertEquals("estao diferentes ",vendaPage.txtCpfVendedor().trim(), "000.000.001-91");
 		assertEquals("estao diferentes ",vendaPage.txtValidade(), "Link válido até");
-		assertTrue("estao diferentes ",vendaPage.txtValor().contains("444,44"));
+		assertTrue("estao diferentes ",vendaPage.txtValor().contains("100,00"));
 	}
 }
