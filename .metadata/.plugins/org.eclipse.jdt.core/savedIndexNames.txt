@@ -58,7 +58,6 @@ INDEX VERSION 1.131+C:\Users\Gian Bertoldi\Documents\Projetos\JornadaComprador\.
 3650386210.index
 4287800609.index
 3716635103.index
-1426009636.index
 4270352140.index
 1304655606.index
 3617595352.index

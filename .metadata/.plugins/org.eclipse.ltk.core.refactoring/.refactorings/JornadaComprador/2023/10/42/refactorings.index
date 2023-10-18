@@ -3,3 +3,6 @@
 1697557171012	Rename field 'dadoVenda'
 1697567141962	Rename method 'validaDadosVendaParcelada'
 1697569124731	Delete element
+1697649306716	Rename package 'utils.enuns'
+1697649311576	Copy package
+1697649333568	Delete element

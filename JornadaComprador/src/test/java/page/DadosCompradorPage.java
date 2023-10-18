@@ -8,7 +8,7 @@ import utils.SeleniumActions;
 
 public class DadosCompradorPage extends SeleniumActions {
 
-	private WebDriver driver;
+	WebDriver driver;
 	
 	public DadosCompradorPage(WebDriver driver) {
 		super(driver);
@@ -57,6 +57,10 @@ public class DadosCompradorPage extends SeleniumActions {
 	
 	public boolean btnContinuar() {
 		return isButtonEnabled(By.id("continuarDadosPessoais"), 30);
+	}
+
+	public void clicarContinuar() {
+		click(By.id("continuarDadosPessoais"), 0);
 	}
 
 }

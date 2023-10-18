@@ -7,12 +7,16 @@ import org.openqa.selenium.WebDriver;
 
 import task.ValidarDadosDoCompradorTask;
 import utils.BrowserDriverMananger;
+import utils.enuns.CartoesPgtoEnum;
+import utils.model.CartoesPgto;
 
 public class TelaDadosVendaTest {
 
 	private WebDriver driver;
 	ValidarDadosDoCompradorTask dadosCompradorTask;
 	BrowserDriverMananger browserMananger;
+	CartoesPgto cartaoPgtio = CartoesPgtoEnum.CREDITO_ELO.obterNumeroCartao();
+	
 	
 	@Before
 	public void setUp() {
@@ -71,5 +75,9 @@ public class TelaDadosVendaTest {
 	@Test
 	public void validaMsgErroEmailInvalido() {
 		dadosCompradorTask.validaMensagemErroSemEmail("test.23");
+	}
+	@Test
+	public void validaPgtoSucesso() {
+		dadosCompradorTask.fazerPagamentoComSucesso(cartaoPgtio);
 	}
 }
